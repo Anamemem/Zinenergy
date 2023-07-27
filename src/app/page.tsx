@@ -1,95 +1,133 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import React from 'react';
+import { Box, Typography, Stack } from '@mui/material';
+import CardCollection from "../../src/app/component/productCard"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+    <><Box width="100%" height="auto" position="relative">
+      <img
+        src="backgroundzin.png"
+        alt="Your Image"
+        style={{
+          width: '100%',
+          height: '100vh',
+          objectFit: 'cover',
+        }} />
+    <Typography
+        variant="h5"
+        component="div"
+        style={{
+          position: 'absolute',
+          bottom: '16px',
+          left: '20px',
+          color: '#ffffff',
+        }}
+      >
+       No Gibberish - Let’s get you <br />
+moving on the Right motion track
+      </Typography>
+    </Box>
+    
+    <Box
+    height={{xs:"100vh", md: "40vh", sm: "50vh"}}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+     
+      }}
+    >
+      <Stack spacing={10} direction={{xs: "column", md: "row", sm: "row"}}>
+        <Box
+          sx={{
+            textAlign: "center",
+          }}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+         
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+     <h2>8+</h2> <Typography fontSize="16px">No Gibberish - Let’s <br />
+get you moving on
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            textAlign: "center",
+           
+          }}
         >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+          <h2>24+</h2> <Typography fontSize="16px">No Gibberish - Let’s <br />
+get you moving on
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            textAlign: "center",
+        
+          }}
+        >
+           <h2>5+</h2> <Typography fontSize="16px">No Gibberish - Let’s <br />
+get you moving on
+          </Typography>
+        </Box>
+      </Stack>
+    </Box>
+    <Box
+      sx={{
+       
+       paddingTop: "40px",
+        alignItems: "center",
+        backgroundColor: "#EDEDED",
+        height: "100vh", // Set the height to full viewport height
+      }}
+      px={{md: "50px", xs: "10px"}}
+    >
+      <Box
+          sx={{
+            textAlign: "center",
+        
+          }}
+        >
+          <Typography  fontWeight="700" fontSize={{xs: "1.5rem", md: "4rem"}}>Product and services
+          </Typography>
+        </Box>
+        <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      
+      }}
+     
+      mt={10}
+    >
+    
+      <CardCollection />
+  
+    </Box>
+    <Box  mt={2} >
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    <Typography> Latest transactions</Typography>
+   
+        <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      backgroundColor: "white",
+      height: "50vh",
+      marginTop: "40px",
+      }}
+     
+     
+    >
+    
+     <Typography>No transactions yet</Typography>
+  
+    </Box>
+    </Box>
+    </Box>
+ 
+    </>
+     )
 }
